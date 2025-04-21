@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أقوال الرسول صلى الله عليه وسلم</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&family=Roboto:wght@400&family=Material+Icons" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #ff7043, #ffcc80);
+            color: #333;
+            direction: rtl;
+        }
+
+        header {
+            background-color: #ff5722;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            border-bottom: 4px solid #d32f2f;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        header h1:hover {
+            transform: scale(1.1);
+        }
+
+        main {
+            padding: 40px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .quote-container {
+            background-color: #fff;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            transform: perspective(600px);
+        }
+
+        .quote-container:hover {
+            transform: scale(1.05) rotateY(10deg);
+            background-color: #fff3e0;
+        }
+
+        .quote {
+            font-size: 1.7rem;
+            margin-bottom: 15px;
+            color: #444;
+            transition: font-size 0.3s ease, color 0.3s ease;
+        }
+
+        .author {
+            font-size: 1.4rem;
+            text-align: right;
+            color: #666;
+            font-weight: bold;
+        }
+
+        .details-container {
+            display: none;
+            margin-top: 15px;
+            background-color: #fff8e1;
+            padding: 20px;
+            border-radius: 8px;
+            border: 2px solid #ffeb3b;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .details {
+            color: #555;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .symbols {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            font-size: 2rem;
+            margin-top: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .symbols .symbol {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .symbols .symbol:hover {
+            transform: scale(1.4);
+            color: #ff7043;
+        }
+
+        .quote-container.shrink .quote {
+            font-size: 1.3rem;
+            color: #ff5722;
+        }
+
+        .quote-container.shrink .details-container {
+            display: block;
+            opacity: 1;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #888;
+        }
+
+        footer a {
+            color: #ff7043;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .icon {
+            font-size: 2rem;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>أقوال الرسول صلى الله عليه وسلم</h1>
+</header>
+
+<main>
+    <div class="quote-container" onclick="toggleDetails(this)">
+        <p class="quote">"من لا يشكر الناس، لا يشكر الله."</p>
+        <p class="author">- الرسول صلى الله عليه وسلم</p>
+        <div class="details-container">
+            <p class="details">يحثنا هذا الحديث على شكر الناس ونعمة الله على عباده. لا نكمل إيماننا إلا إذا شكرنا من يقدم لنا المعروف.</p>
+            <div class="symbols">
+                <span class="material-icons symbol">book</span>
+                <span class="material-icons symbol">favorite</span>
+                <span class="material-icons symbol">lightbulb</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="quote-container" onclick="toggleDetails(this)">
+        <p class="quote">"إنما الأعمال بالنيات."</p>
+        <p class="author">- الرسول صلى الله عليه وسلم</p>
+        <div class="details-container">
+            <p class="details">يوضح هذا الحديث أهمية النية في الأعمال وصدق التوجه لله. النية هي الأساس الذي تحدد به قيمة العمل.</p>
+            <div class="symbols">
+                <span class="material-icons symbol">edit</span>
+                <span class="material-icons symbol">check_circle</span>
+                <span class="material-icons symbol">brightness_7</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="quote-container" onclick="toggleDetails(this)">
+        <p class="quote">"الدين النصيحة."</p>
+        <p class="author">- الرسول صلى الله عليه وسلم</p>
+        <div class="details-container">
+            <p class="details">يحثنا هذا الحديث على تقديم النصيحة الخالصة للآخرين. النصيحة من أسمى القيم التي يجب أن نتبعها.</p>
+            <div class="symbols">
+                <span class="material-icons symbol">comment</span>
+                <span class="material-icons symbol">book</span>
+                <span class="material-icons symbol">lightbulb_outline</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="quote-container" onclick="toggleDetails(this)">
+        <p class="quote">"من لا يرحم لا يُرحم."</p>
+        <p class="author">- الرسول صلى الله عليه وسلم</p>
+        <div class="details-container">
+            <p class="details">يحثنا هذا الحديث على أن نكون رحماء ببعضنا البعض. الرحمة أساس بناء مجتمع متعاون.</p>
+            <div class="symbols">
+                <span class="material-icons symbol">favorite</span>
+                <span class="material-icons symbol">people</span>
+                <span class="material-icons symbol">hands_helping</span>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>موقع من تطوير <a href="https://t.me/Arab_programm">Arab programmers</a></p>
+</footer>
+
+<script>
+    function toggleDetails(container) {
+        const quote = container.querySelector('.quote');
+        const details = container.querySelector('.details-container');
+        container.classList.toggle('shrink');
+    }
+</script>
+
+</body>
+</html>
